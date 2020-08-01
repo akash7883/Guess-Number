@@ -4,35 +4,45 @@
 
 import random
 gusess = 5
-guess_count =1
+
 secrete_num = random.randint(1,10)
 check_num = True
 
-while guess_count < gusess:
 
-    while check_num:
+def is_number(): # validation for num in case user type a srring
+     while check_num:
         try:
+            global number
             number = int(input('enter a number : '))
             break
         except ValueError:
             print("please enter a number ")
             continue
 
-    if number < secrete_num:
-        print("to low")
-        print(f'you left with {gusess -guess_count} ')
-        print(secrete_num)
-        guess_count += 1
-        continue
-    elif number == secrete_num:
-        print("you won congratulations")
-        break
-    elif number > secrete_num:
-        print("you are to high")
-        print(f'you left with {gusess -guess_count} ')
-        print(secrete_num)
-        guess_count+= 1
-        continue
+def main(): 
+    guess_count = 1
+    while guess_count < gusess:
+        is_number()
+
+
+        if number < secrete_num:
+            print("to low")
+            print(f'you left with {gusess -guess_count} ')
+            print(secrete_num)
+            guess_count += 1
+            continue
+        elif number == secrete_num:
+            print("you won congratulations")
+            break
+        elif number > secrete_num:
+            print("you are to high")
+            print(f'you left with {gusess -guess_count} ')
+            print(secrete_num)
+            guess_count += 1
+            continue
+if __name__ == "__main__":
+    main()
+
         
 
     
