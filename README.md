@@ -1,4 +1,4 @@
 # Guess the Number 
-its a simple problem that i wroked while i am learning python 
+it's a simple problem that i worked while i am learning python 
 
 its a great journey so far 
